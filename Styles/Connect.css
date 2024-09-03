@@ -1,0 +1,147 @@
+/* Styling Connect Section */
+.connect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #272833;
+  padding: 50px calc(100vw/10);
+  padding-bottom: 40px;
+}
+
+/* Styling Main Area */
+.connect .main-area {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  position: relative;
+}
+
+/* Styling Handles */
+.main-area .handles {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.main-area .handles a {
+  text-decoration: none;
+  color: #df445e;
+  margin: 0px 10px;
+}
+
+.main-area .handles a i{
+  transition: color 0.3s;
+}
+
+.main-area .handles a:hover i{
+  color: #f4506c;
+}
+
+/* Download Button */
+.cv a{
+  text-decoration: none;
+}
+
+.btn-97,
+.btn-97 *,
+.btn-97 :after,
+.btn-97 :before,
+.btn-97:after,
+.btn-97:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+
+.btn-97 {
+  -webkit-tap-highlight-color:transparent;
+  background-color:#000;
+  background-image: none;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+.btn-97:disabled {
+  cursor: default;
+}
+
+.btn-97:-moz-focusring {
+  outline: auto;
+}
+
+.btn-97 svg {
+  display: block;
+}
+
+.btn-97 [hidden] {
+  display: none;
+}
+
+.btn-97 {
+  background:#fff;
+  border: 1px solid;
+  border-radius: 999px;
+  box-sizing: border-box;
+  color:#f13756;
+  display: block;
+  font-weight: 900;
+  overflow: hidden;
+  padding: 0.7rem 1.7rem;
+  text-transform: uppercase;
+  transition: 0.2s;
+  letter-spacing: 0.5px;
+  position: absolute;
+  right: 0;
+  top: -5px;
+}
+
+.btn-97:hover {
+  box-shadow: 0 6px 0 -4px #fff, 0 9px 0 -4px #aaa, 0 12px 0 -4px #000;
+  transform: translateY(-5px);
+}
+
+/* Copyright Section */
+.copyright{
+  margin-top: 30px;
+}
+.copyright p{
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+@media  screen and (max-width:760px) {
+  .handles i{
+    font-size: 1.5em;
+  } 
+  .btn-97 {
+    padding: 0.4rem 1.2rem;
+    top: -2px;
+    font-size: 12px;
+  }
+}
+
+@media  screen and (max-width:512px) {
+  .connect .main-area{
+    justify-content: start;
+  }
+}
+
+@media  screen and (max-width:370px) {
+  .handles i{
+    font-size: 1.4em;
+  }
+  .btn-97 {
+    padding: 0.35rem 1rem;
+    top: -2px;
+    font-size: 12px;
+}
+}

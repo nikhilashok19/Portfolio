@@ -1,0 +1,315 @@
+/* Styling Skills Section */
+.skills{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #eef5ff;
+  padding: 80px calc(100vw/10);
+}
+
+/* Styling Main Area of Skills Section */
+.main-area-skills{
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styling Skills Title */
+.main-area-skills .title{
+  margin:20px 0px;
+  color: #2c1763;
+}
+
+.main-area-skills h2{
+  font-size: 2.2em;
+}
+
+.main-area-skills .title-info{
+  margin-bottom: 55px;
+  color: #2c1763;
+  width: 88%;
+}
+
+.main-area-skills .title-info p{
+  line-height: 1.5;
+}
+
+/* Styling Skills Grid */
+.main-area-skills .skills-grid{
+  height: 100%;
+  width: 100%;
+  display: grid;
+  column-gap: 70px;
+  row-gap: 50px;
+  padding: 20px 80px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.main-area-skills .skills-grid .skills-items{
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  cursor: pointer;
+}
+
+.main-area-skills .skills-grid .skills-items::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: none;
+  z-index: -1;
+  top: 214px;
+  left: 0;
+  cursor: pointer;
+  background: #2c1763;
+  transition:top 0.5s ease-out;
+}
+
+.main-area-skills .skills-grid .skills-items:hover::before{
+  background: rgba(44, 23, 99,0.95);
+  top: 0;
+}
+.skills-items:nth-child(3) i,
+.skills-items:nth-child(4) i,
+.skills-items:nth-child(6) i{
+  font-size: 4.5em;
+}
+.main-area-skills .skills-grid .skills-items i{
+  margin-top: 15px;
+  color: #2c1763;
+  transition: color 0.6s ease-out;
+}
+
+.main-area-skills .skills-grid .skills-items:hover i{
+  color: white;
+}
+
+.skills-items .progress{
+  width: 100%;
+  margin: 20px 0px;
+}
+
+.skills-items .progress .progress-title h5{
+  margin-left: 2px;
+  color: #2c1763;
+  transition: color 0.5s ease-out;
+}
+
+.main-area-skills .skills-grid .skills-items:hover .progress-title h5{
+  color: white;
+}
+
+.skills-items .progress .progress-bar{
+  display: block;
+  width: 100%;
+  height: 10px;
+  background: #2c1763;
+  border-radius: 25px;
+  margin-top: 8px;
+  transition: background 0.5s ease-out;
+}
+.main-area-skills .skills-grid .skills-items:hover .progress-bar{
+  background: white;
+}
+
+.progress-bar .progress-per{
+  display: block;
+  height: 100%;
+  background: #00ffbb;
+  position: relative;
+  border-radius: 25px 0px 0px 25px;
+  animation: load 0.8s ease-out forwards ;
+}
+@keyframes load{
+  0%{
+    width: 0%;
+  }
+}
+
+.progress-bar .progress-per h5{
+  position: absolute;
+  top: -28px;
+  right: -15px;
+  color: #2c1763;
+  transition: color 0.5 ease-out;
+}
+
+.main-area-skills .skills-grid .skills-items:hover .progress-bar .progress-per h5{
+  color: white;
+}
+
+.skills-items:nth-child(1) .progress .progress-bar .progress-per{
+  width: 80%;
+}
+
+.skills-items:nth-child(2) .progress .progress-bar .progress-per{
+  width: 70%;
+}
+
+.skills-items:nth-child(3) .progress .progress-bar .progress-per{
+  width: 70%;
+}
+
+.skills-items:nth-child(4) .progress .progress-bar .progress-per{
+  width: 85%;
+}
+
+.skills-items:nth-child(5) .progress .progress-bar .progress-per{
+  width: 80%;
+}
+
+.skills-items:nth-child(6) .progress .progress-bar .progress-per{
+  width: 70%;
+}
+
+@media screen and (max-width:1200px){
+  .main-area-skills .skills-grid{
+    padding: 10px 40px;
+  }
+}
+@media screen and (max-width:1040px){
+  .main-area-skills .skills-grid{
+    padding: 10px 28px;
+  }
+  .skills-items .progress .progress-title h5,
+  .progress-bar .progress-per h5{
+    font-size: 11.5px;
+    top: -26px;
+  }
+  .skills-items i{
+    font-size: 4.5em;
+  }
+  .skills-items:nth-child(3) i,
+  .skills-items:nth-child(4) i,
+  .skills-items:nth-child(6) i{
+    font-size: 3.8em;
+  }
+  .main-area-skills h2 {
+    margin-bottom: 35px;
+  }
+  .main-area-skills .title-info{
+    display: none;
+  }
+}
+
+@media screen and (max-width:885px){
+  .skills-items i{
+    font-size: 5em;
+  }
+  .skills-items:nth-child(3) i,
+  .skills-items:nth-child(4) i,
+  .skills-items:nth-child(6) i{
+    font-size: 4.2em;
+  }
+  .main-area-skills .skills-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .main-area-skills .skills-grid .skills-items{
+    padding: 20px 12px;
+  }
+
+
+}
+@media screen and (max-width:670px){
+  .skills-items i{
+    font-size: 4.2em;
+  }
+  .skills-items:nth-child(3) i,
+  .skills-items:nth-child(4) i,
+  .skills-items:nth-child(6) i{
+    font-size: 4em;
+  }
+  .main-area-skills .skills-grid .skills-items{
+    padding: 12px;
+  }
+  .main-area-skills .skills-grid{
+    column-gap: 15px;
+    row-gap: 25px;
+  }
+  .main-area-skills .skills-grid {
+    padding: 10px;
+  }
+  .skills-items .progress .progress-bar{
+    height: 8px;
+  }
+}
+
+@media screen and (max-width:580px){
+  .skills-items i{
+    font-size: 3.5em;
+  }
+  .skills-items:nth-child(3) i,
+  .skills-items:nth-child(4) i,
+  .skills-items:nth-child(6) i{
+    font-size: 3em;
+  }
+  .main-area-skills .skills-grid{
+    row-gap: 25px;
+    column-gap: 16px;
+  }
+
+  .skills{
+    padding: 80px 25px;
+  }
+
+  .main-area-skills .skills-grid {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width:480px){
+  .main-area-skills h2 {
+    font-size: 30px;
+  }
+  .skills-items i{
+    font-size: 3.5em;
+  }
+  .skills-items:nth-child(3) i,
+  .skills-items:nth-child(4) i,
+  .skills-items:nth-child(6) i{
+    font-size: 2.8em;
+  }
+  .main-area-skills .skills-grid{
+    row-gap: 25px;
+    column-gap: 16px;
+  }
+
+  .skills{
+    padding: 80px 15px;
+  }
+
+  .main-area-skills .skills-grid {
+    padding: 0px;
+  }
+  .main-area-skills .skills-grid .skills-items {
+    padding: 6px;
+  }
+  .skills-items .progress .progress-title h5{
+    font-size: 10px;
+  }
+  .skills-items .progress .progress-title h5,
+  .progress-bar .progress-per h5{
+    font-size: 10px;
+    top: -23px;
+  }
+}
+
+/* @media screen and (max-width:360px){
+  .main-area-skills .skills-grid{
+    padding: 10px 30px;
+    grid-template-columns: 1fr;
+  }
+} */
+
