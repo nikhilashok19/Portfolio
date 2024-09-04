@@ -77,8 +77,7 @@ body.fade-in{
   color: white;
 }
 
-.navbar a:hover,
-.navbar a:focus{
+.navbar a:hover{
   color: #00abf0;
 }
 
@@ -93,9 +92,13 @@ body.fade-in{
   bottom: -5px;
   transition: width 0.6s;
 }
-
-.navbar a:hover::before,
-.navbar a:focus::before{
+.navbar a.active{
+  color:#00abf0;
+}
+.navbar a.active::before{
+  width:104%;
+}
+.navbar a:hover::before{
   width: 104%;
 }
 
